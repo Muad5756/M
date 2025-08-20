@@ -6,9 +6,243 @@
     <title>Raneem Salah - Social Media Manager</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
-
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: linear-gradient(135deg, #0a0a0f 0%, #1a1a2e 25%, #16213e 75%, #0f3460 100%);
+            background-attachment: fixed;
+        }
+        
+        /* Enhanced Grid Pattern Background */
+        .grid-bg {
+            background-image: 
+                linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            animation: gridFloat 20s ease-in-out infinite;
+        }
+        
+        @keyframes gridFloat {
+            0%, 100% { background-position: 0 0, 0 0; }
+            50% { background-position: 20px 20px, 20px 20px; }
+        }
+        
+        /* Advanced Card Hover Effects */
+        .card-hover { 
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .card-hover:hover { 
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 
+                0 25px 50px rgba(0, 0, 0, 0.4),
+                0 0 0 1px rgba(59, 130, 246, 0.2),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+        
+        /* Sophisticated Fade-in Animation */
+        .fade-in { 
+            opacity: 0; 
+            transform: translateY(30px) scale(0.95); 
+            animation: sophisticatedFadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards; 
+        }
+        @keyframes sophisticatedFadeIn { 
+            to { 
+                opacity: 1; 
+                transform: translateY(0) scale(1); 
+            } 
+        }
+        
+        /* Enhanced Navigation */
+        .nav-link { 
+            position: relative; 
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+            border-radius: 0.5rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .nav-link:hover::before, .nav-link.active::before { 
+            opacity: 1; 
+        }
+        .nav-link::after { 
+            content: ''; 
+            position: absolute; 
+            bottom: -2px; 
+            left: 50%; 
+            width: 0; 
+            height: 2px; 
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6); 
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transform: translateX(-50%);
+        }
+        .nav-link:hover::after, .nav-link.active::after { 
+            width: 80%; 
+        }
+        
+        /* Premium Glass Morphism */
+        .glass-card { 
+            background: linear-gradient(135deg, 
+                rgba(255, 255, 255, 0.1) 0%, 
+                rgba(255, 255, 255, 0.05) 100%);
+            backdrop-filter: blur(20px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 
+                0 8px 32px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Enhanced Floating Animation */
+        .floating { 
+            animation: enhancedFloating 4s ease-in-out infinite; 
+        }
+        @keyframes enhancedFloating { 
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg); 
+            } 
+            25% { 
+                transform: translateY(-8px) rotate(1deg); 
+            }
+            50% { 
+                transform: translateY(-12px) rotate(0deg); 
+            }
+            75% { 
+                transform: translateY(-8px) rotate(-1deg); 
+            }
+        }
+        
+        /* Advanced Glow Effects */
+        .glow { 
+            box-shadow: 
+                0 0 20px rgba(59, 130, 246, 0.4),
+                0 0 40px rgba(59, 130, 246, 0.2),
+                0 0 60px rgba(59, 130, 246, 0.1);
+        }
+        .text-glow { 
+            text-shadow: 
+                0 0 10px rgba(59, 130, 246, 0.5),
+                0 0 20px rgba(59, 130, 246, 0.3),
+                0 0 30px rgba(59, 130, 246, 0.1);
+        }
+        
+        /* Sophisticated Button Styles */
+        .btn-primary {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 
+                0 4px 15px rgba(59, 130, 246, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                0 8px 25px rgba(59, 130, 246, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            border: 2px solid;
+            border-image: linear-gradient(135deg, #3b82f6, #8b5cf6) 1;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1));
+            transform: translateY(-2px);
+        }
+        
+        .btn-verify {
+            background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            box-shadow: 
+                0 4px 15px rgba(16, 185, 129, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.2);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-verify:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                0 8px 25px rgba(16, 185, 129, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Enhanced Typography */
+        .heading-gradient {
+            background: linear-gradient(135deg, #ffffff 0%, #e0e7ff 50%, #c7d2fe 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        /* Micro-interactions */
+        .micro-hover {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .micro-hover:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Advanced Responsive Grid */
+        .responsive-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        /* Smooth Page Transitions */
+        .page-content {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .page-content.hidden {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        
+        /* Staggered Animation Delays */
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        .stagger-6 { animation-delay: 0.6s; }
+        
+        /* Scrollbar Hide */
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        
+        /* Dropdown Animation */
+        .dropdown-enter {
+            opacity: 0;
+            transform: translateY(-20px);
+            max-height: 0;
+            overflow: hidden;
+        }
+        .dropdown-enter-active {
+            opacity: 1;
+            transform: translateY(0);
+            max-height: 1000px;
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
 </head>
 <body class="bg-gray-900 grid-bg">
     <!-- Enhanced Navigation -->
@@ -624,88 +858,293 @@
                         <h2 class="text-4xl font-bold text-white">Written Content</h2>
                     </div>
 
-                    <!-- Professional Writing -->
-                    <div class="mb-16">
-                        <h3 class="text-3xl font-semibold text-blue-400 mb-12 flex items-center">
-                            <span class="w-3 h-10 bg-blue-500 mr-6 rounded"></span>
+                    <!-- Content Category Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-6 mb-16 justify-center">
+                        <button onclick="toggleContentDropdown('professional')" 
+                                class="btn-primary px-10 py-4 rounded-xl text-lg font-semibold flex items-center justify-center transition-all duration-300 hover:scale-105">
+                            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                            </svg>
                             Professional Writing
-                        </h3>
+                            <svg id="professional-arrow" class="w-5 h-5 ml-3 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
                         
-                        <div class="responsive-grid">
-                            <!-- Sample 1 -->
-                            <div class="glass-card p-10 rounded-3xl card-hover">
-                                <div class="flex items-start mb-6">
-                                    <div class="w-12 h-12 bg-green-500 rounded-2xl flex items-center justify-center mr-4 mt-1 glow">
-                                        <span class="text-white text-lg font-bold">1</span>
-                                    </div>
-                                    <div class="flex-1">
-                                        <h4 class="text-xl font-semibold text-white mb-4">Product Launch Teaser</h4>
-                                        <div class="bg-gray-800/50 p-6 rounded-xl border-r-4 border-blue-500 backdrop-filter backdrop-blur-sm">
-                                            <p class="text-gray-300 leading-relaxed" dir="rtl">
+                        <button onclick="toggleContentDropdown('creative')" 
+                                class="btn-secondary text-white px-10 py-4 rounded-xl text-lg font-semibold flex items-center justify-center transition-all duration-300 hover:scale-105">
+                            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                            </svg>
+                            Creative Writing
+                            <svg id="creative-arrow" class="w-5 h-5 ml-3 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        
+                        <button onclick="toggleContentDropdown('graphic')" 
+                                class="btn-secondary text-white px-10 py-4 rounded-xl text-lg font-semibold flex items-center justify-center transition-all duration-300 hover:scale-105">
+                            <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                            </svg>
+                            Graphic Design
+                            <svg id="graphic-arrow" class="w-5 h-5 ml-3 transform transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Professional Writing Dropdown -->
+                    <div id="professional-content" class="hidden mb-16 transition-all duration-500 ease-in-out">
+                        <div class="glass-card p-8 rounded-3xl">
+                            <h3 class="text-3xl font-semibold text-blue-400 mb-8 text-center">Professional Writing Samples</h3>
+                            
+                            <!-- Horizontal Scrolling Container -->
+                            <div class="relative">
+                                <div class="flex overflow-x-auto space-x-6 pb-6 scrollbar-hide" style="scroll-behavior: smooth;">
+                                    <!-- Sample 1 -->
+                                    <div class="flex-shrink-0 w-96 glass-card p-8 rounded-2xl card-hover border-l-4 border-blue-500">
+                                        <div class="flex items-center mb-6">
+                                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mr-4 glow">
+                                                <span class="text-white text-lg font-bold">1</span>
+                                            </div>
+                                            <h4 class="text-xl font-semibold text-white">Product Launch Teaser</h4>
+                                        </div>
+                                        <div class="bg-gray-800/50 p-6 rounded-xl backdrop-filter backdrop-blur-sm">
+                                            <p class="text-gray-300 leading-relaxed text-lg" dir="rtl">
                                                 جاهزين للتغيير ؟<br>
-                                                نشتغلوا في الكواليس على مفاجأة حيتم الإعلان عليها قريبًا، شيء جديد ومختلف بيخلي كل خططكم الجاية تتغير ✨<br>
+                                                نشتغلوا في الكواليس على مفاجأة حيتم الإعلان عليها قريبًا، شيء جديد ومختلف بيخلي كل خططكم الجاية تتغير ✨<br><br>
                                                 العد التنازلي بدأ، وموعدنا معاكم يوم 25 مايو 🗓
                                             </p>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
 
-                            <!-- Sample 2 -->
-                            <div class="glass-card p-10 rounded-3xl card-hover">
-                                <div class="flex items-start mb-6">
-                                    <div class="w-12 h-12 bg-purple-500 rounded-2xl flex items-center justify-center mr-4 mt-1 glow">
-                                        <span class="text-white text-lg font-bold">2</span>
-                                    </div>
-                                    <div class="flex-1">
-                                        <h4 class="text-xl font-semibold text-white mb-4">Miyoko Diapers Campaign</h4>
-                                        <div class="bg-gray-800/50 p-6 rounded-xl border-r-4 border-purple-500 backdrop-filter backdrop-blur-sm">
-                                            <p class="text-gray-300 leading-relaxed" dir="rtl">
+                                    <!-- Sample 2 -->
+                                    <div class="flex-shrink-0 w-96 glass-card p-8 rounded-2xl card-hover border-l-4 border-purple-500">
+                                        <div class="flex items-center mb-6">
+                                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mr-4 glow">
+                                                <span class="text-white text-lg font-bold">2</span>
+                                            </div>
+                                            <h4 class="text-xl font-semibold text-white">Miyoko Diapers Campaign</h4>
+                                        </div>
+                                        <div class="bg-gray-800/50 p-6 rounded-xl backdrop-filter backdrop-blur-sm">
+                                            <p class="text-gray-300 leading-relaxed text-lg" dir="rtl">
                                                 ما تستنيش يبكي عشان تعرفي إنه بلل 💧👶🏻.<br>
                                                 طفلك ما يقدرش يقولك، لكن حفاضة Miyoko تقدر 😉.<br>
-                                                مع مؤشر البلل الذكي، تضمني راحة صغيرك قبل حتى ما يبدأ يشتكي أو ينزعج ✨.
+                                                مع مؤشر البلل الذكي، تضمني راحة صغيرك قبل حتى ما يبدأ يشتكي أو ينزعج ✨.<br><br>
+                                                🔹 يتغير لونه بوضوح بمجرد ما يصير بلل<br>
+                                                🔹 تنبيه فوري إن وقت التغيير جا بدون ما تفتحي الحفاضة<br>
+                                                🔹 تحمي من التسلخات والاحمرار لأنك تغيري في الوقت الصح<br>
+                                                🔹 تقللي التغيير العشوائي وتوفري مجهودك وفلوسك<br>
+                                                🔹 مثالي للأمهات الجدد<br><br>
+                                                #مايوكو .. لأن راحة طفلك مافيهاش تنازل 🌸.
                                             </p>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
 
-                            <!-- Sample 3 -->
-                            <div class="glass-card p-10 rounded-3xl card-hover">
-                                <div class="flex items-start mb-6">
-                                    <div class="w-12 h-12 bg-yellow-500 rounded-2xl flex items-center justify-center mr-4 mt-1 glow">
-                                        <span class="text-white text-lg font-bold">3</span>
-                                    </div>
-                                    <div class="flex-1">
-                                        <h4 class="text-xl font-semibold text-white mb-4">Photography Service Promotion</h4>
-                                        <div class="bg-gray-800/50 p-6 rounded-xl border-r-4 border-yellow-500 backdrop-filter backdrop-blur-sm">
-                                            <p class="text-gray-300 leading-relaxed" dir="rtl">
+                                    <!-- Sample 3 -->
+                                    <div class="flex-shrink-0 w-96 glass-card p-8 rounded-2xl card-hover border-l-4 border-yellow-500">
+                                        <div class="flex items-center mb-6">
+                                            <div class="w-12 h-12 bg-gradient-to-br from-yellow-500 to-yellow-600 rounded-xl flex items-center justify-center mr-4 glow">
+                                                <span class="text-white text-lg font-bold">3</span>
+                                            </div>
+                                            <h4 class="text-xl font-semibold text-white">Photography Service</h4>
+                                        </div>
+                                        <div class="bg-gray-800/50 p-6 rounded-xl backdrop-filter backdrop-blur-sm">
+                                            <p class="text-gray-300 leading-relaxed text-lg" dir="rtl">
                                                 بـ5 دينار فقط ✨<br>
                                                 احصل على صورة احترافية في العيد لعائلتك وأطفالك 🎊<br>
-                                                بمناسبة عيد الفطر المبارك، أبعاد قدمت لكم خدمة التصوير الإحترافي للأطفال في العيد بسعر رمزي جدًا
+                                                بمناسبة عيد الفطر المبارك، أبعاد قدمت لكم خدمة التصوير الإحترافي للأطفال في العيد بسعر رمزي جدًا، 5 دينار فقط للصورة ✨<br><br>
+                                                مع توفر ديكورات واستراتيجيات تصوير احترافية، وأفكار جديدة ومبتكرة، وبالتعاون مع المصورة المُبدعة " بلقيس أحمد " 📷<br><br>
+                                                🔸 المكان : مُنتجع بيانكا، بنغازي، الهواري<br>
+                                                🔸 الموعد : ابتداءً من ثالث يوم العيد ( يوم الأربعاء ) وحتى يوم الجمعة<br>
+                                                🔸 التوقيت : من الساعة 12 ظهرًا حتى 9 مساءً<br><br>
+                                                #وثق ذكرى العيد للعائلة ✨.
                                             </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Sample 4 -->
+                                    <div class="flex-shrink-0 w-96 glass-card p-8 rounded-2xl card-hover border-l-4 border-teal-500">
+                                        <div class="flex items-center mb-6">
+                                            <div class="w-12 h-12 bg-gradient-to-br from-teal-500 to-teal-600 rounded-xl flex items-center justify-center mr-4 glow">
+                                                <span class="text-white text-lg font-bold">4</span>
+                                            </div>
+                                            <h4 class="text-xl font-semibold text-white">Travel Agency Campaign</h4>
+                                        </div>
+                                        <div class="bg-gray-800/50 p-6 rounded-xl backdrop-filter backdrop-blur-sm">
+                                            <p class="text-gray-300 leading-relaxed text-lg" dir="rtl">
+                                                درجة الحرارة عالية وماتقدرش حتى تطلع ؟ ☀️.<br>
+                                                هذا أنسب وقت تستفيد من عروض Sky Seekers السياحية 🔥.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Scroll Indicators -->
+                                <div class="flex justify-center mt-6 space-x-2">
+                                    <div class="w-3 h-3 bg-blue-500 rounded-full opacity-50"></div>
+                                    <div class="w-3 h-3 bg-gray-500 rounded-full opacity-30"></div>
+                                    <div class="w-3 h-3 bg-gray-500 rounded-full opacity-30"></div>
+                                    <div class="w-3 h-3 bg-gray-500 rounded-full opacity-30"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Creative Writing Dropdown -->
+                    <div id="creative-content" class="hidden mb-16 transition-all duration-500 ease-in-out">
+                        <div class="glass-card p-8 rounded-3xl">
+                            <h3 class="text-3xl font-semibold text-purple-400 mb-8 text-center">Creative Writing Samples</h3>
+                            
+                            <!-- Horizontal Scrolling Container -->
+                            <div class="relative">
+                                <div class="flex overflow-x-auto space-x-6 pb-6 scrollbar-hide" style="scroll-behavior: smooth;">
+                                    <!-- Creative Sample 1 -->
+                                    <div class="flex-shrink-0 w-96 glass-card p-8 rounded-2xl card-hover border-l-4 border-pink-500">
+                                        <div class="flex items-center mb-6">
+                                            <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-xl flex items-center justify-center mr-4 glow">
+                                                <span class="text-white text-lg font-bold">1</span>
+                                            </div>
+                                            <h4 class="text-xl font-semibold text-white">نصٌّ</h4>
+                                        </div>
+                                        <div class="bg-gray-800/50 p-6 rounded-xl backdrop-filter backdrop-blur-sm">
+                                            <p class="text-gray-300 leading-relaxed text-lg" dir="rtl">
+                                                يتحدّث الجميع عن فِقدان الشّغف، لكِن لِما لم يُحدِّثنا أحد قَط عن إيجادِه ؟<br><br>
+                                                أن تكُون ضائعًا طِيلة حياتِك، لا هَدف لَكَ ولا مَسعَى، ثُمّ وبِدون سابِق إنذار، تلتقِط طرف الخَيط ذاك مِن حيثُ لا تحتسِب!<br><br>
+                                                تَعرِف من تَودُّ أن تكُون، وفِيمَا تَود أن تُجاهِد. طِيبُ الشّعور آنذاك يستِحق فِعلًا أن تُحَاوِل إيجَاد شغف المفقُود.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Creative Sample 2 -->
+                                    <div class="flex-shrink-0 w-96 glass-card p-8 rounded-2xl card-hover border-l-4 border-indigo-500">
+                                        <div class="flex items-center mb-6">
+                                            <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mr-4 glow">
+                                                <span class="text-white text-lg font-bold">2</span>
+                                            </div>
+                                            <h4 class="text-xl font-semibold text-white">نصٌّ</h4>
+                                        </div>
+                                        <div class="bg-gray-800/50 p-6 rounded-xl backdrop-filter backdrop-blur-sm">
+                                            <p class="text-gray-300 leading-relaxed text-lg" dir="rtl">
+                                                الطّيور النّاشِئة عَلىٰ القيُود لا تَرىٰ الحُرّة إلا تهديدًا لهَا.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Creative Sample 3 -->
+                                    <div class="flex-shrink-0 w-96 glass-card p-8 rounded-2xl card-hover border-l-4 border-emerald-500">
+                                        <div class="flex items-center mb-6">
+                                            <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-emerald-600 rounded-xl flex items-center justify-center mr-4 glow">
+                                                <span class="text-white text-lg font-bold">3</span>
+                                            </div>
+                                            <h4 class="text-xl font-semibold text-white">نصٌّ</h4>
+                                        </div>
+                                        <div class="bg-gray-800/50 p-6 rounded-xl backdrop-filter backdrop-blur-sm">
+                                            <p class="text-gray-300 leading-relaxed text-lg" dir="rtl">
+                                                كقطعة من أُحجَِية، تُحاوِلُ وضعَها فِي المكانِ غيرِ المُلائِمِ لهَا، فتَجْرحُها المُحَاولاتُ فقَط، وهِيَ لَيسَت بِمُستجيبة مهمَا حَاولتْ.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <!-- Creative Sample 4 -->
+                                    <div class="flex-shrink-0 w-96 glass-card p-8 rounded-2xl card-hover border-l-4 border-orange-500">
+                                        <div class="flex items-center mb-6">
+                                            <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mr-4 glow">
+                                                <span class="text-white text-lg font-bold">4</span>
+                                            </div>
+                                            <h4 class="text-xl font-semibold text-white">نصٌّ</h4>
+                                        </div>
+                                        <div class="bg-gray-800/50 p-6 rounded-xl backdrop-filter backdrop-blur-sm">
+                                            <p class="text-gray-300 leading-relaxed text-lg" dir="rtl">
+                                                مِن الأُمور المُثيرة للسُخريّة أن المُحتّل دائمًا يطلُب مِنك الإمتِنان له عِندمَا يَهَبُكَ شيئًا سلبَهُ مِنك هو بالمقَامِ الأول.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Scroll Indicators -->
+                                <div class="flex justify-center mt-6 space-x-2">
+                                    <div class="w-3 h-3 bg-purple-500 rounded-full opacity-50"></div>
+                                    <div class="w-3 h-3 bg-gray-500 rounded-full opacity-30"></div>
+                                    <div class="w-3 h-3 bg-gray-500 rounded-full opacity-30"></div>
+                                    <div class="w-3 h-3 bg-gray-500 rounded-full opacity-30"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Graphic Design Dropdown -->
+                    <div id="graphic-content" class="hidden mb-16 transition-all duration-500 ease-in-out">
+                        <div class="glass-card p-8 rounded-3xl">
+                            <h3 class="text-3xl font-semibold text-orange-400 mb-8 text-center">Graphic Design Portfolio</h3>
+                            
+                            <!-- Image Gallery Grid -->
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                <!-- Design 1 -->
+                                <div class="glass-card p-4 rounded-2xl card-hover group">
+                                    <div class="relative overflow-hidden rounded-xl">
+                                        <img src="photos/IMG_7007.jpeg" alt="Graphic Design Sample 1" 
+                                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                                             onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                        <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                            <h4 class="text-lg font-semibold mb-1">Design Sample 1</h4>
+                                            <p class="text-sm text-gray-200">Creative visual design</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Design 2 -->
+                                <div class="glass-card p-4 rounded-2xl card-hover group">
+                                    <div class="relative overflow-hidden rounded-xl">
+                                        <img src="photos/IMG_7008.jpeg" alt="Graphic Design Sample 2" 
+                                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                                             onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                        <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                            <h4 class="text-lg font-semibold mb-1">Design Sample 2</h4>
+                                            <p class="text-sm text-gray-200">Brand identity work</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Design 3 -->
+                                <div class="glass-card p-4 rounded-2xl card-hover group">
+                                    <div class="relative overflow-hidden rounded-xl">
+                                        <img src="photos/IMG_7009.jpeg" alt="Graphic Design Sample 3" 
+                                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                                             onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                        <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                            <h4 class="text-lg font-semibold mb-1">Design Sample 3</h4>
+                                            <p class="text-sm text-gray-200">Marketing materials</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Design 4 -->
+                                <div class="glass-card p-4 rounded-2xl card-hover group">
+                                    <div class="relative overflow-hidden rounded-xl">
+                                        <img src="photos/IMG_7010.jpeg" alt="Graphic Design Sample 4" 
+                                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                                             onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                        <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                            <h4 class="text-lg font-semibold mb-1">Design Sample 4</h4>
+                                            <p class="text-sm text-gray-200">Digital artwork</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <!-- Sample 4 -->
-                            <div class="glass-card p-10 rounded-3xl card-hover">
-                                <div class="flex items-start mb-6">
-                                    <div class="w-12 h-12 bg-teal-500 rounded-2xl flex items-center justify-center mr-4 mt-1 glow">
-                                        <span class="text-white text-lg font-bold">4</span>
-                                    </div>
-                                    <div class="flex-1">
-                                        <h4 class="text-xl font-semibold text-white mb-4">Travel Agency Campaign</h4>
-                                        <div class="bg-gray-800/50 p-6 rounded-xl border-r-4 border-teal-500 backdrop-filter backdrop-blur-sm">
-                                            <p class="text-gray-300 leading-relaxed" dir="rtl">
-                                                درجة الحرارة عالية وماتقدرش حتى تطلع ؟ ☀️.<br>
-                                                هذا أنسب وقت تستفيد من عروض Sky Seekers السياحية 🔥.<br>
-                                                من رحلات المغامرة إلى رحلات الاستجمام، جهّزنا لكم باقات مميزة
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
+                            
+                            <!-- Gallery Description -->
+                            <div class="mt-8 text-center">
+                                <p class="text-gray-300 text-lg leading-relaxed max-w-3xl mx-auto">
+                                    A collection of graphic design work showcasing creativity in visual communication, 
+                                    brand identity, and digital art. Each piece demonstrates attention to detail and 
+                                    innovative design thinking.
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -1076,7 +1515,173 @@
         </div>
     </footer>
 
-    
-    <script src="scripts.js"></script>
-</body>
+    <script>
+        function showPage(pageId) {
+            // Hide all pages with smooth transition
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => {
+                page.classList.add('hidden');
+                page.style.opacity = '0';
+                page.style.transform = 'translateY(20px)';
+            });
+            
+            // Show selected page with animation
+            setTimeout(() => {
+                const targetPage = document.getElementById(pageId + '-page');
+                targetPage.classList.remove('hidden');
+                setTimeout(() => {
+                    targetPage.style.opacity = '1';
+                    targetPage.style.transform = 'translateY(0)';
+                }, 50);
+            }, 150);
+            
+            // Update navigation with enhanced effects
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Close mobile menu if open
+            document.getElementById('mobile-menu').classList.add('hidden');
+            
+            // Smooth scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            
+            // Trigger fade-in animations for new page content
+            setTimeout(() => {
+                const fadeElements = document.querySelectorAll(`#${pageId}-page .fade-in`);
+                fadeElements.forEach((el, index) => {
+                    setTimeout(() => {
+                        el.style.animationDelay = `${index * 0.1}s`;
+                        el.classList.add('fade-in');
+                    }, index * 100);
+                });
+            }, 300);
+        }
+        
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+        
+        function toggleContentDropdown(type) {
+            const professionalContent = document.getElementById('professional-content');
+            const creativeContent = document.getElementById('creative-content');
+            const graphicContent = document.getElementById('graphic-content');
+            const professionalArrow = document.getElementById('professional-arrow');
+            const creativeArrow = document.getElementById('creative-arrow');
+            const graphicArrow = document.getElementById('graphic-arrow');
+            
+            if (type === 'professional') {
+                // Toggle professional content
+                if (professionalContent.classList.contains('hidden')) {
+                    // Show professional, hide others
+                    professionalContent.classList.remove('hidden');
+                    creativeContent.classList.add('hidden');
+                    graphicContent.classList.add('hidden');
+                    professionalArrow.style.transform = 'rotate(180deg)';
+                    creativeArrow.style.transform = 'rotate(0deg)';
+                    graphicArrow.style.transform = 'rotate(0deg)';
+                    
+                    // Add animation
+                    setTimeout(() => {
+                        professionalContent.classList.add('dropdown-enter-active');
+                    }, 50);
+                } else {
+                    // Hide professional
+                    professionalContent.classList.add('hidden');
+                    professionalArrow.style.transform = 'rotate(0deg)';
+                    professionalContent.classList.remove('dropdown-enter-active');
+                }
+            } else if (type === 'creative') {
+                // Toggle creative content
+                if (creativeContent.classList.contains('hidden')) {
+                    // Show creative, hide others
+                    creativeContent.classList.remove('hidden');
+                    professionalContent.classList.add('hidden');
+                    graphicContent.classList.add('hidden');
+                    creativeArrow.style.transform = 'rotate(180deg)';
+                    professionalArrow.style.transform = 'rotate(0deg)';
+                    graphicArrow.style.transform = 'rotate(0deg)';
+                    
+                    // Add animation
+                    setTimeout(() => {
+                        creativeContent.classList.add('dropdown-enter-active');
+                    }, 50);
+                } else {
+                    // Hide creative
+                    creativeContent.classList.add('hidden');
+                    creativeArrow.style.transform = 'rotate(0deg)';
+                    creativeContent.classList.remove('dropdown-enter-active');
+                }
+            } else if (type === 'graphic') {
+                // Toggle graphic content
+                if (graphicContent.classList.contains('hidden')) {
+                    // Show graphic, hide others
+                    graphicContent.classList.remove('hidden');
+                    professionalContent.classList.add('hidden');
+                    creativeContent.classList.add('hidden');
+                    graphicArrow.style.transform = 'rotate(180deg)';
+                    professionalArrow.style.transform = 'rotate(0deg)';
+                    creativeArrow.style.transform = 'rotate(0deg)';
+                    
+                    // Add animation
+                    setTimeout(() => {
+                        graphicContent.classList.add('dropdown-enter-active');
+                    }, 50);
+                } else {
+                    // Hide graphic
+                    graphicContent.classList.add('hidden');
+                    graphicArrow.style.transform = 'rotate(0deg)';
+                    graphicContent.classList.remove('dropdown-enter-active');
+                }
+            }
+        }
+        
+        // Enhanced intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animationPlayState = 'running';
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+        
+        // Initialize animations and interactions
+        document.addEventListener('DOMContentLoaded', () => {
+            // Observe elements for animation
+            const animatedElements = document.querySelectorAll('.fade-in, .card-hover');
+            animatedElements.forEach(el => {
+                el.style.animationPlayState = 'paused';
+                observer.observe(el);
+            });
+            
+            // Add smooth hover effects to all interactive elements
+            const interactiveElements = document.querySelectorAll('.micro-hover, .card-hover, .btn-primary, .btn-secondary');
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', function() {
+                    this.style.transform = this.style.transform.replace('scale(1)', '') + ' scale(1.05)';
+                });
+                el.addEventListener('mouseleave', function() {
+                    this.style.transform = this.style.transform.replace('scale(1.05)', '');
+                });
+            });
+            
+            // Initialize staggered animations
+            const staggerElements = document.querySelectorAll('[class*="stagger-"]');
+            staggerElements.forEach(el => {
+                const staggerClass = Array.from(el.classList).find(cls => cls.startsWith('stagger-'));
+                if (staggerClass) {
+                    const delay = parseInt(staggerClass.split('-')[1]) * 0.1;
+                    el.style.animationDelay = `${delay}s`;
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9720d85701fcbb8f',t:'MTc1NTY4MTk0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
