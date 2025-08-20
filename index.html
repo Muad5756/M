@@ -983,10 +983,10 @@
                                 
                                 <!-- Scroll Indicators -->
                                 <div class="flex justify-center mt-6 space-x-2">
-                                    <div class="w-3 h-3 bg-blue-500 rounded-full opacity-50"></div>
-                                    <div class="w-3 h-3 bg-gray-500 rounded-full opacity-30"></div>
-                                    <div class="w-3 h-3 bg-gray-500 rounded-full opacity-30"></div>
-                                    <div class="w-3 h-3 bg-gray-500 rounded-full opacity-30"></div>
+                                    <div class="professional-indicator w-3 h-3 bg-blue-500 rounded-full opacity-50 transition-all duration-300 cursor-pointer hover:scale-125" data-index="0"></div>
+                                    <div class="professional-indicator w-3 h-3 bg-gray-500 rounded-full opacity-30 transition-all duration-300 cursor-pointer hover:scale-125" data-index="1"></div>
+                                    <div class="professional-indicator w-3 h-3 bg-gray-500 rounded-full opacity-30 transition-all duration-300 cursor-pointer hover:scale-125" data-index="2"></div>
+                                    <div class="professional-indicator w-3 h-3 bg-gray-500 rounded-full opacity-30 transition-all duration-300 cursor-pointer hover:scale-125" data-index="3"></div>
                                 </div>
                             </div>
                         </div>
@@ -1065,10 +1065,10 @@
                                 
                                 <!-- Scroll Indicators -->
                                 <div class="flex justify-center mt-6 space-x-2">
-                                    <div class="w-3 h-3 bg-purple-500 rounded-full opacity-50"></div>
-                                    <div class="w-3 h-3 bg-gray-500 rounded-full opacity-30"></div>
-                                    <div class="w-3 h-3 bg-gray-500 rounded-full opacity-30"></div>
-                                    <div class="w-3 h-3 bg-gray-500 rounded-full opacity-30"></div>
+                                    <div class="creative-indicator w-3 h-3 bg-purple-500 rounded-full opacity-50 transition-all duration-300 cursor-pointer hover:scale-125" data-index="0"></div>
+                                    <div class="creative-indicator w-3 h-3 bg-gray-500 rounded-full opacity-30 transition-all duration-300 cursor-pointer hover:scale-125" data-index="1"></div>
+                                    <div class="creative-indicator w-3 h-3 bg-gray-500 rounded-full opacity-30 transition-all duration-300 cursor-pointer hover:scale-125" data-index="2"></div>
+                                    <div class="creative-indicator w-3 h-3 bg-gray-500 rounded-full opacity-30 transition-all duration-300 cursor-pointer hover:scale-125" data-index="3"></div>
                                 </div>
                             </div>
                         </div>
@@ -1079,62 +1079,72 @@
                         <div class="glass-card p-8 rounded-3xl">
                             <h3 class="text-3xl font-semibold text-orange-400 mb-8 text-center">Graphic Design Portfolio</h3>
                             
-                            <!-- Image Gallery Grid -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                                <!-- Design 1 -->
-                                <div class="glass-card p-4 rounded-2xl card-hover group">
-                                    <div class="relative overflow-hidden rounded-xl">
-                                        <img src="photos/IMG_7007.jpeg" alt="Graphic Design Sample 1" 
-                                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                                             onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                        <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            <h4 class="text-lg font-semibold mb-1">Design Sample 1</h4>
-                                            <p class="text-sm text-gray-200">Creative visual design</p>
+                            <!-- Horizontal Scrolling Container -->
+                            <div class="relative">
+                                <div class="flex overflow-x-auto space-x-6 pb-6 scrollbar-hide" style="scroll-behavior: smooth;">
+                                    <!-- Design 1 -->
+                                    <div class="flex-shrink-0 w-80 glass-card p-4 rounded-2xl card-hover group">
+                                        <div class="relative overflow-hidden rounded-xl">
+                                            <img src="https://raw.githubusercontent.com/Muad5756/M/refs/heads/main/IMG_7007.jpeg" alt="Graphic Design Sample 1" 
+                                                 class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                                                 onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                            <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                <h4 class="text-lg font-semibold mb-1">Design Sample 1</h4>
+                                                <p class="text-sm text-gray-200">Creative visual design</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Design 2 -->
+                                    <div class="flex-shrink-0 w-80 glass-card p-4 rounded-2xl card-hover group">
+                                        <div class="relative overflow-hidden rounded-xl">
+                                            <img src="https://raw.githubusercontent.com/Muad5756/M/refs/heads/main/IMG_7008.jpeg" alt="Graphic Design Sample 2" 
+                                                 class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                                                 onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                            <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                <h4 class="text-lg font-semibold mb-1">Design Sample 2</h4>
+                                                <p class="text-sm text-gray-200">Brand identity work</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Design 3 -->
+                                    <div class="flex-shrink-0 w-80 glass-card p-4 rounded-2xl card-hover group">
+                                        <div class="relative overflow-hidden rounded-xl">
+                                            <img src="https://raw.githubusercontent.com/Muad5756/M/refs/heads/main/IMG_7009.jpeg" alt="Graphic Design Sample 3" 
+                                                 class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                                                 onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                            <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                <h4 class="text-lg font-semibold mb-1">Design Sample 3</h4>
+                                                <p class="text-sm text-gray-200">Marketing materials</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Design 4 -->
+                                    <div class="flex-shrink-0 w-80 glass-card p-4 rounded-2xl card-hover group">
+                                        <div class="relative overflow-hidden rounded-xl">
+                                            <img src="https://raw.githubusercontent.com/Muad5756/M/refs/heads/main/IMG_7010.jpeg" alt="Graphic Design Sample 4" 
+                                                 class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                                                 onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
+                                            <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                            <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                                <h4 class="text-lg font-semibold mb-1">Design Sample 4</h4>
+                                                <p class="text-sm text-gray-200">Digital artwork</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Design 2 -->
-                                <div class="glass-card p-4 rounded-2xl card-hover group">
-                                    <div class="relative overflow-hidden rounded-xl">
-                                        <img src="photos/IMG_7008.jpeg" alt="Graphic Design Sample 2" 
-                                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                                             onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                        <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            <h4 class="text-lg font-semibold mb-1">Design Sample 2</h4>
-                                            <p class="text-sm text-gray-200">Brand identity work</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Design 3 -->
-                                <div class="glass-card p-4 rounded-2xl card-hover group">
-                                    <div class="relative overflow-hidden rounded-xl">
-                                        <img src="photos/IMG_7009.jpeg" alt="Graphic Design Sample 3" 
-                                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                                             onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                        <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            <h4 class="text-lg font-semibold mb-1">Design Sample 3</h4>
-                                            <p class="text-sm text-gray-200">Marketing materials</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Design 4 -->
-                                <div class="glass-card p-4 rounded-2xl card-hover group">
-                                    <div class="relative overflow-hidden rounded-xl">
-                                        <img src="photos/IMG_7010.jpeg" alt="Graphic Design Sample 4" 
-                                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
-                                             onerror="this.src=''; this.alt='Image failed to load'; this.style.display='none';">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                        <div class="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                                            <h4 class="text-lg font-semibold mb-1">Design Sample 4</h4>
-                                            <p class="text-sm text-gray-200">Digital artwork</p>
-                                        </div>
-                                    </div>
+                                
+                                <!-- Scroll Indicators -->
+                                <div class="flex justify-center mt-6 space-x-2">
+                                    <div class="graphic-indicator w-3 h-3 bg-orange-500 rounded-full opacity-50 transition-all duration-300 cursor-pointer hover:scale-125" data-index="0"></div>
+                                    <div class="graphic-indicator w-3 h-3 bg-gray-500 rounded-full opacity-30 transition-all duration-300 cursor-pointer hover:scale-125" data-index="1"></div>
+                                    <div class="graphic-indicator w-3 h-3 bg-gray-500 rounded-full opacity-30 transition-all duration-300 cursor-pointer hover:scale-125" data-index="2"></div>
+                                    <div class="graphic-indicator w-3 h-3 bg-gray-500 rounded-full opacity-30 transition-all duration-300 cursor-pointer hover:scale-125" data-index="3"></div>
                                 </div>
                             </div>
                             
@@ -1652,6 +1662,42 @@
             });
         }, observerOptions);
         
+        // Function to update scroll indicators
+        function updateScrollIndicators(container, indicatorClass, activeColor) {
+            const scrollContainer = container.querySelector('.flex.overflow-x-auto');
+            const indicators = container.querySelectorAll(`.${indicatorClass}`);
+            const items = scrollContainer.children;
+            
+            if (items.length === 0) return;
+            
+            const itemWidth = items[0].offsetWidth + 24; // item width + gap
+            const scrollLeft = scrollContainer.scrollLeft;
+            const activeIndex = Math.round(scrollLeft / itemWidth);
+            
+            indicators.forEach((indicator, index) => {
+                if (index === activeIndex) {
+                    indicator.className = `${indicatorClass} w-3 h-3 ${activeColor} rounded-full opacity-50 transition-all duration-300 cursor-pointer hover:scale-125`;
+                } else {
+                    indicator.className = `${indicatorClass} w-3 h-3 bg-gray-500 rounded-full opacity-30 transition-all duration-300 cursor-pointer hover:scale-125`;
+                }
+                indicator.setAttribute('data-index', index);
+            });
+        }
+        
+        // Function to scroll to specific item
+        function scrollToItem(container, index) {
+            const scrollContainer = container.querySelector('.flex.overflow-x-auto');
+            const items = scrollContainer.children;
+            
+            if (items[index]) {
+                const itemWidth = items[0].offsetWidth + 24; // item width + gap
+                scrollContainer.scrollTo({
+                    left: index * itemWidth,
+                    behavior: 'smooth'
+                });
+            }
+        }
+        
         // Initialize animations and interactions
         document.addEventListener('DOMContentLoaded', () => {
             // Observe elements for animation
@@ -1681,7 +1727,67 @@
                     el.style.animationDelay = `${delay}s`;
                 }
             });
+            
+            // Setup scroll indicators for professional content
+            const professionalContainer = document.getElementById('professional-content');
+            if (professionalContainer) {
+                const professionalScrollContainer = professionalContainer.querySelector('.flex.overflow-x-auto');
+                
+                // Add scroll event listener
+                professionalScrollContainer.addEventListener('scroll', () => {
+                    updateScrollIndicators(professionalContainer, 'professional-indicator', 'bg-blue-500');
+                });
+                
+                // Add click event listeners to indicators
+                const professionalIndicators = professionalContainer.querySelectorAll('.professional-indicator');
+                professionalIndicators.forEach(indicator => {
+                    indicator.addEventListener('click', () => {
+                        const index = parseInt(indicator.getAttribute('data-index'));
+                        scrollToItem(professionalContainer, index);
+                    });
+                });
+            }
+            
+            // Setup scroll indicators for creative content
+            const creativeContainer = document.getElementById('creative-content');
+            if (creativeContainer) {
+                const creativeScrollContainer = creativeContainer.querySelector('.flex.overflow-x-auto');
+                
+                // Add scroll event listener
+                creativeScrollContainer.addEventListener('scroll', () => {
+                    updateScrollIndicators(creativeContainer, 'creative-indicator', 'bg-purple-500');
+                });
+                
+                // Add click event listeners to indicators
+                const creativeIndicators = creativeContainer.querySelectorAll('.creative-indicator');
+                creativeIndicators.forEach(indicator => {
+                    indicator.addEventListener('click', () => {
+                        const index = parseInt(indicator.getAttribute('data-index'));
+                        scrollToItem(creativeContainer, index);
+                    });
+                });
+            }
+            
+            // Setup scroll indicators for graphic content
+            const graphicContainer = document.getElementById('graphic-content');
+            if (graphicContainer) {
+                const graphicScrollContainer = graphicContainer.querySelector('.flex.overflow-x-auto');
+                
+                // Add scroll event listener
+                graphicScrollContainer.addEventListener('scroll', () => {
+                    updateScrollIndicators(graphicContainer, 'graphic-indicator', 'bg-orange-500');
+                });
+                
+                // Add click event listeners to indicators
+                const graphicIndicators = graphicContainer.querySelectorAll('.graphic-indicator');
+                graphicIndicators.forEach(indicator => {
+                    indicator.addEventListener('click', () => {
+                        const index = parseInt(indicator.getAttribute('data-index'));
+                        scrollToItem(graphicContainer, index);
+                    });
+                });
+            }
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9720d85701fcbb8f',t:'MTc1NTY4MTk0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9720e968111ad9ce',t:'MTc1NTY4MjY0My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
